@@ -1,6 +1,6 @@
-import week1.Lie
+import week1.Street
 
 fun main() {
-    val question = Lie()
+    val question = Street()
     question.start()
 }
