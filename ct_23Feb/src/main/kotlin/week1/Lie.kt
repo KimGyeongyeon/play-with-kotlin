@@ -2,10 +2,10 @@ package week1
 
 import Solution
 
-class Lie: Solution {
+class Lie : Solution {
     override fun start() {
-        val res = parseInput{
-                truth, arr -> solution(truth, arr)
+        val res = parseInput { truth, arr ->
+            solution(truth, arr)
         }
         println(res)
     }
@@ -21,7 +21,7 @@ class Lie: Solution {
         // 2nd line
         val truthInfo = readLine()?.split(" ") ?: return -4
         val initialTruthMembers = hashSetOf<Int>()
-        for (i in 1 until truthInfo[0].toInt()) {
+        for (i in 1..truthInfo[0].toInt()) {
             truthInfo[i].toIntOrNull()?.let {
                 initialTruthMembers.add(it)
             }
@@ -32,7 +32,7 @@ class Lie: Solution {
         for (i in 0 until partyNumber) {
             val input = readLine()?.split(" ") ?: return -5
 
-            for (j in 1 until input.size) {
+            for (j in 1..input[0].toInt()) {
                 input[j].toIntOrNull()?.let {
                     parties[i].add(it)
                 }
@@ -46,16 +46,15 @@ class Lie: Solution {
     fun solution(initialTruthMembers: HashSet<Int>, parties: Array<HashSet<Int>>): Int {
         // 안들키고 과장할 수 있는 파티의 최댓값
         val truthMembers: HashSet<Int> = HashSet(initialTruthMembers)
-
-        var lieCount = parties.size
         for (i in parties.indices) {
             val party = parties[i]
             if (party.any { it -> truthMembers.contains(it) }) {
                 truthMembers.addAll(party)
-                lieCount--
             }
         }
 
-        return lieCount
+        return parties.count {
+                party -> party.intersect(truthMembers).isEmpty()
+        }
     }
 }
