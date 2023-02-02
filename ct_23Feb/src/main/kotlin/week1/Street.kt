@@ -1,6 +1,8 @@
 package week1
 
 import Solution
+import getNbyMArray
+
 class Street : Solution {
     override fun start() {
 //        solution(
@@ -14,15 +16,15 @@ class Street : Solution {
 //            )
 //        ).let { println(it) }
 
-        parseInput{
-                n, m, arr -> solution(n, m, arr)
+        parseInput { n, m, arr ->
+            solution(n, m, arr)
         }.let { println(it) }
     }
 
     fun parseInput(func: (Int, Int, Array<IntArray>) -> Int): Int {
         val NUMBER_OF_COLOR = 3
         val n = readln().toIntOrNull() ?: return -1
-        val cost = Parser.getNbyMArray(n, NUMBER_OF_COLOR)
+        val cost = getNbyMArray(n, NUMBER_OF_COLOR)
 
         return func(n, NUMBER_OF_COLOR, cost)
     }
