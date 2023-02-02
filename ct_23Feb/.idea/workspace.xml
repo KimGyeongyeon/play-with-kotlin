@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cbdbb1cd-4463-4744-a9b4-a368dec453f4" name="변경" comment="feat : Parser의 함수를 최상위로 올림">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/week1/Lie.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/week1/Lie.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
