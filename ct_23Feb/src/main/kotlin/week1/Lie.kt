@@ -14,6 +14,7 @@ class Lie : Solution {
     fun parseInput(func: (Int, IntArray, Array<HashSet<Int>>) -> Int): Int {
         // 1st line
         val numbers = readLine()?.split(" ") ?: return -1
+        // Tip. 유니코드를 벗어나지 않는 문자열을 다룰 때는 StringTokenizer가 빠르다.
         if (numbers.size != 2) return -2
 
         val totalMember = numbers[0].toIntOrNull() ?: return -3
@@ -65,10 +66,10 @@ class Lie : Solution {
         }
 
         // 진실을 아는 사람을 모조리 찾아낸다.
-        val queue = ArrayDeque<Int>()
+        val queue = ArrayDeque<Int>() // Tip. LinkedList와 ArrayDeque간의 경쟁이 쟁쟁하다.
         val visited = HashSet<Int>()
 
-        for (member in initialTruthMembers) {
+        for (member in initialTruthMembers) { // Tip. 아예 큐에 넣고 시작하면 간단하다.
             queue.add(member)
 
             while (queue.isNotEmpty()) {

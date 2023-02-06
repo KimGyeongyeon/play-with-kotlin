@@ -1,6 +1,7 @@
+import week1.Radius
 import week1.Street
 
 fun main() {
-    val question = Street()
+    val question = Radius()
     question.start()
 }
