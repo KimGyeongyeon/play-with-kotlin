@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cbdbb1cd-4463-4744-a9b4-a368dec453f4" name="변경" comment="fix : git 오류&#10;&#10;- merge 이후 커밋 메세지를 바꾸지말자..">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/week2/SpecificPath.kt" afterDir="false" />
+    <list default="true" id="cbdbb1cd-4463-4744-a9b4-a368dec453f4" name="변경" comment="feat : FloydWarshall 구현 연습&#10;&#10;- 다익스트라와 비슷한 전략으로 접근할 수 있다.&#10;- 다만 탐색 없이 for loop 세개로 돌린다.">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/week2/FloydWarshall.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/consoleApp.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Parser.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Parser.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Solution.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Solution.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/week2/Macro.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/week2/Macro.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +109,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675307876417</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="submit : 특정한 최단경로 ver 1&#10;&#10;- 경유지 2곳을 들리는데에 2!가지의 경우의 수가 있으므로 각 거리를 계산해서 둘 중 최소값을 반환하도록 했다.&#10;- 각 경로의 길이를 계산하는 데에는 다익스트라 알고리즘을 적용했다.&#10;- 한번 계산한 경로는 저장해서 두번 연산하지 않도록 했다.">
+      <created>1676094104674</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1676094104674</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -126,7 +130,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="baek/1238" />
+                        <option value="main" />
                       </list>
                     </value>
                   </entry>
@@ -144,7 +148,9 @@
     <MESSAGE value="feat : Parser.kt에 배열 처리 추가" />
     <MESSAGE value="feat : Parser의 함수를 최상위로 올림" />
     <MESSAGE value="fix : Parser 참조 수정" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix : Parser 참조 수정" />
+    <MESSAGE value="submit : 특정한 최단경로 ver 1&#10;&#10;- 경유지 2곳을 들리는데에 2!가지의 경우의 수가 있으므로 각 거리를 계산해서 둘 중 최소값을 반환하도록 했다.&#10;- 각 경로의 길이를 계산하는 데에는 다익스트라 알고리즘을 적용했다.&#10;- 한번 계산한 경로는 저장해서 두번 연산하지 않도록 했다." />
+    <MESSAGE value="feat : FloydWarshall 구현 연습&#10;&#10;- 다익스트라와 비슷한 전략으로 접근할 수 있다.&#10;- 다만 탐색 없이 for loop 세개로 돌린다." />
+    <option name="LAST_COMMIT_MESSAGE" value="feat : FloydWarshall 구현 연습&#10;&#10;- 다익스트라와 비슷한 전략으로 접근할 수 있다.&#10;- 다만 탐색 없이 for loop 세개로 돌린다." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

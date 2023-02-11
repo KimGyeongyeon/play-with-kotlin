@@ -3,10 +3,9 @@ package week2
 import Solution
 import org.openqa.selenium.By
 import org.openqa.selenium.Keys
-import org.openqa.selenium.WebDriver
 import org.openqa.selenium.chrome.ChromeDriver
 
-class Macro: Solution {
+class Macro : Solution {
     private val DEVIEW_URL = "https://deview.kr/2023"
     private val driver = ChromeDriver().also { it.get(DEVIEW_URL) }
     override fun start() {

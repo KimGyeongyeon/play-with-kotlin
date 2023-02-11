@@ -1,7 +1,6 @@
-import week2.Macro
-import week2.SpecificPath
+import week2.FloydWarshall
 
 fun main() {
-    val question = SpecificPath()
+    val question = FloydWarshall()
     question.start()
 }
