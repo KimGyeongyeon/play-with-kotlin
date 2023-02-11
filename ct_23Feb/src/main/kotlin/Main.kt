@@ -1,7 +1,7 @@
-import week1.Radius
-import week1.Street
+import week2.Macro
+import week2.SpecificPath
 
 fun main() {
-    val question = Radius()
+    val question = SpecificPath()
     question.start()
 }
