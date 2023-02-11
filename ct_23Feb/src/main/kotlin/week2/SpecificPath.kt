@@ -6,24 +6,29 @@ import kotlin.math.min
 class SpecificPath : Solution {
 
     override fun start() {
-        // println(parseInput())
-        val edges = arrayOf(
-            arrayOf(-2, -2, -2, -2, -2, -2),
-            arrayOf(-2, -2,  1, -2, -2, -2), //1
-            arrayOf(-2,  1, -2,  2, 10, -2), //2
-            arrayOf(-2, -2,  2, -2,  3, -2), //3
-            arrayOf(-2, -2, 10,  3, -2,  1), //4
-            arrayOf(-2, -2, -2, -2,  1, -2), //5
-        )
-
-        getDistance(1, 5, edges).let { println(it) }
-        getDistance(3, 5, edges).let { println(it) }
+        println(parseInput())
+//        val edges = arrayOf(
+//            arrayOf(-2, -2, -2, -2, -2, -2),
+//            arrayOf(-2, -2,  1, -2, -2, -2), //1
+//            arrayOf(-2,  1, -2,  2, 10, -2), //2
+//            arrayOf(-2, -2,  2, -2,  3, -2), //3
+//            arrayOf(-2, -2, 10,  3, -2,  1), //4
+//            arrayOf(-2, -2, -2, -2,  1, -2), //5
+//        )
+//
+//        getDistance(1, 5, edges).let { println(it) }
+//        getDistance(3, 5, edges).let { println(it) }
     }
+
+    private val SPACE = " "
+    private val FAIL = -1
+    private val NOT_EXIST = -2
+    private val INF = Int.MAX_VALUE
 
     private fun parseInput(): Int {
         val nm = readln().split(SPACE).map { it.toInt() }
 
-        val edges = Array<Array<Int>>(nm[0] + 1) { Array(nm[0] + 1) { NOT_EXIST } }
+        val edges = Array<Array<Int>>(nm[0] + 1) { Array(nm[0] + 1) { INF } }
         for (i in 0 until nm[1]) {
             val nodes = readln().split(SPACE).map { it.toInt() }
             val distance = nodes[2]
@@ -79,7 +84,7 @@ class SpecificPath : Solution {
         // 초기화
         val queue = ArrayDeque<Int>()
         val visited = HashSet<Int>()
-        val pathLength = Array<Int>(edges.size) { Int.MAX_VALUE }
+        val pathLength = Array<Int>(edges.size) { INF }
         pathLength[arr] = 0
         queue.add(arr)
 
@@ -93,9 +98,11 @@ class SpecificPath : Solution {
                     queue.add(i)
 
                     val oldLength = pathLength[i]
-                    val newLength = pathLength[currNode] % Int.MAX_VALUE + edges[currNode][i] // overflow 방지
-
-                    pathLength[i] = min(oldLength, newLength)
+                    val new1 = pathLength[currNode]
+                    if (new1 != INF) {
+                        val new2 = edges[currNode][i]
+                        pathLength[i] = min(oldLength, new1 + new2)
+                    }
                 }
             }
             // 방문처리
@@ -109,16 +116,10 @@ class SpecificPath : Solution {
     }
 
     private fun throwIfIntMax(num: Int): Int {
-        if (num == Int.MAX_VALUE) {
+        if (num == INF) {
             throw Exception("Path does not exist")
         } else {
             return num
         }
-    }
-
-    companion object {
-        private const val SPACE = " "
-        private const val FAIL = -1
-        private const val NOT_EXIST = -2
     }
 }
