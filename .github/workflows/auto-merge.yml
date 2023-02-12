@@ -1,0 +1,7 @@
+name: Merge every code into main
+on: push
+jobs:
+  a:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo 'temp action'
