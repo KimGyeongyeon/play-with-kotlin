@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cbdbb1cd-4463-4744-a9b4-a368dec453f4" name="변경" comment="submit : 특정한 최단경로 ver 2&#10;&#10;- main에서도 실행되도록 상수를 private val로 바꿨다.&#10;- 쓸데없이 최적화시킨다고 BFS 방식을 적용한게 문제였나 의심이 든다.">
+    <list default="true" id="cbdbb1cd-4463-4744-a9b4-a368dec453f4" name="변경" comment="submit : 특정한 최단경로 ver 3&#10;&#10;- 모든 쌍을 검사했는데도 안된다">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/week2/SpecificPath.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/week2/SpecificPath.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +121,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676159305587</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="submit : 특정한 최단경로 ver 3&#10;&#10;- 모든 쌍을 검사했는데도 안된다">
+      <created>1676288795762</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1676288795762</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -157,7 +163,8 @@
     <MESSAGE value="submit : 특정한 최단경로 ver 1&#10;&#10;- 경유지 2곳을 들리는데에 2!가지의 경우의 수가 있으므로 각 거리를 계산해서 둘 중 최소값을 반환하도록 했다.&#10;- 각 경로의 길이를 계산하는 데에는 다익스트라 알고리즘을 적용했다.&#10;- 한번 계산한 경로는 저장해서 두번 연산하지 않도록 했다." />
     <MESSAGE value="feat : FloydWarshall 구현 연습&#10;&#10;- 다익스트라와 비슷한 전략으로 접근할 수 있다.&#10;- 다만 탐색 없이 for loop 세개로 돌린다." />
     <MESSAGE value="submit : 특정한 최단경로 ver 2&#10;&#10;- main에서도 실행되도록 상수를 private val로 바꿨다.&#10;- 쓸데없이 최적화시킨다고 BFS 방식을 적용한게 문제였나 의심이 든다." />
-    <option name="LAST_COMMIT_MESSAGE" value="submit : 특정한 최단경로 ver 2&#10;&#10;- main에서도 실행되도록 상수를 private val로 바꿨다.&#10;- 쓸데없이 최적화시킨다고 BFS 방식을 적용한게 문제였나 의심이 든다." />
+    <MESSAGE value="submit : 특정한 최단경로 ver 3&#10;&#10;- 모든 쌍을 검사했는데도 안된다" />
+    <option name="LAST_COMMIT_MESSAGE" value="submit : 특정한 최단경로 ver 3&#10;&#10;- 모든 쌍을 검사했는데도 안된다" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -166,6 +173,16 @@
           <url>file://$PROJECT_DIR$/src/main/kotlin/week2/SpecificPath.kt</url>
           <line>116</line>
           <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/week3/NM8.kt</url>
+          <line>27</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/week3/NM8.kt</url>
+          <line>31</line>
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
