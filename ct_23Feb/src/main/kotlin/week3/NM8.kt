@@ -22,7 +22,7 @@ class NM8 : Solution {
 
     fun getCombination(pool: List<Int>, size: Int): List<Array<Int>> {
 
-        val pick = Stack<Int>().apply { addAll(Array<Int>(size){0}) }
+        val pick = Stack<Int>().apply { addAll(Array<Int>(size) { 0 }) }
         val result = mutableListOf<Array<Int>>()
 
         while (true) {
@@ -33,7 +33,7 @@ class NM8 : Solution {
             // 인덱스 갱신
             val endedIndex = Stack<Int>()
             for (i in pick.indices.reversed()) {
-                if (pick[i] == pool.size - size + i) {
+                if (pick[i] == pool.size - 1) {
                     pick.pop().let { endedIndex.push(it) }
                 } else {
                     break
@@ -48,7 +48,7 @@ class NM8 : Solution {
                     break
                 } else {
                     pick[lastIndex]++
-                    var head = pick.last()
+                    val head = pick.last()
                     while (endedIndex.isNotEmpty()) {
                         pick.add(head)
                         endedIndex.pop()
@@ -58,5 +58,4 @@ class NM8 : Solution {
         }
         return result
     }
-
 }
