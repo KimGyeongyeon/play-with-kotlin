@@ -1,14 +1,12 @@
 package week3
 
 import Solution
-import java.util.Stack
+import java.util.*
 
 /* https://www.acmicpc.net/problem/15657 */
 class NM8 : Solution {
     override fun start() {
-        println("N과 M (8)")
-        //parseInput().forEach { print(it.joinToString("") + SPACE) }
-        getCombination(listOf(0, 1, 2, 3, 4, 5,), 4)
+        parseInput().forEach { println(it.joinToString(SPACE)) }
     }
 
     private val SPACE = " "
@@ -19,42 +17,46 @@ class NM8 : Solution {
     }
 
     fun findAscendingSequence(pool: List<Int>, size: Int): List<Array<Int>> {
-        return getCombination(pool, size)
+        return getCombination(pool.sorted(), size)
     }
 
     fun getCombination(pool: List<Int>, size: Int): List<Array<Int>> {
 
-        val pick = Stack<Int>().apply {addAll(0 until size)}
+        val pick = Stack<Int>().apply { addAll(Array<Int>(size){0}) }
         val result = mutableListOf<Array<Int>>()
 
-        while (pick.first() != pool.size - size) {
+        while (true) {
             val elem = Array<Int>(size) { i -> pool[pick[i]] }.let {
                 result.add(it)
-                println(it.joinToString())
             }
+
+            // 인덱스 갱신
+            val endedIndex = Stack<Int>()
             for (i in pick.indices.reversed()) {
-                // 지금 last랑 last 직접 인덱스에만 유효하다. stack을 쓸 필요가 있다.
                 if (pick[i] == pool.size - size + i) {
-                    // 6C3의 케이스에서 0,1,5를 선택한 경우
-                    // 다음은 0,2,3이 되어야한다.
-                    if (i == 0) {
-                        pick[i]++
-                        break
-                    } else {
-                        pick[i - 1]++
-                        for (j in i until size) {
-                            pick[j] = pick[j - 1] + 1
-                        }
-                        break
-                    }
+                    pick.pop().let { endedIndex.push(it) }
                 } else {
-                    // 6C3의 케이스에서 0,1,4를 선택한 경우
-                    // 다음은 0,1,5를 선택해야한다.
-                    pick[i]++
                     break
+                }
+            }
+
+            if (endedIndex.isEmpty()) {
+                pick[size - 1]++
+            } else {
+                val lastIndex = pick.size - 1
+                if (lastIndex < 0) {
+                    break
+                } else {
+                    pick[lastIndex]++
+                    var head = pick.last()
+                    while (endedIndex.isNotEmpty()) {
+                        pick.add(head)
+                        endedIndex.pop()
+                    }
                 }
             }
         }
         return result
     }
+
 }

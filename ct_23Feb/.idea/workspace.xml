@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cbdbb1cd-4463-4744-a9b4-a368dec453f4" name="변경" comment="submit : 특정한 최단경로 ver 3&#10;&#10;- 모든 쌍을 검사했는데도 안된다">
+    <list default="true" id="cbdbb1cd-4463-4744-a9b4-a368dec453f4" name="변경" comment="save : N과 M (8)&#10;&#10;- 현재로서는 끝 인덱스 두개만 바꿀수있는 상태">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/week3/NM8.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/week3/NM8.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +128,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676288795762</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="save : N과 M (8)&#10;&#10;- 현재로서는 끝 인덱스 두개만 바꿀수있는 상태">
+      <created>1676308366208</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1676308366208</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -164,7 +171,8 @@
     <MESSAGE value="feat : FloydWarshall 구현 연습&#10;&#10;- 다익스트라와 비슷한 전략으로 접근할 수 있다.&#10;- 다만 탐색 없이 for loop 세개로 돌린다." />
     <MESSAGE value="submit : 특정한 최단경로 ver 2&#10;&#10;- main에서도 실행되도록 상수를 private val로 바꿨다.&#10;- 쓸데없이 최적화시킨다고 BFS 방식을 적용한게 문제였나 의심이 든다." />
     <MESSAGE value="submit : 특정한 최단경로 ver 3&#10;&#10;- 모든 쌍을 검사했는데도 안된다" />
-    <option name="LAST_COMMIT_MESSAGE" value="submit : 특정한 최단경로 ver 3&#10;&#10;- 모든 쌍을 검사했는데도 안된다" />
+    <MESSAGE value="save : N과 M (8)&#10;&#10;- 현재로서는 끝 인덱스 두개만 바꿀수있는 상태" />
+    <option name="LAST_COMMIT_MESSAGE" value="save : N과 M (8)&#10;&#10;- 현재로서는 끝 인덱스 두개만 바꿀수있는 상태" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -173,16 +181,6 @@
           <url>file://$PROJECT_DIR$/src/main/kotlin/week2/SpecificPath.kt</url>
           <line>116</line>
           <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/week3/NM8.kt</url>
-          <line>27</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/week3/NM8.kt</url>
-          <line>31</line>
-          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
