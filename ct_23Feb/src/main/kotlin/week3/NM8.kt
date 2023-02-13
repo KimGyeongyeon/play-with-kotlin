@@ -17,10 +17,10 @@ class NM8 : Solution {
     }
 
     fun findAscendingSequence(pool: List<Int>, size: Int): List<Array<Int>> {
-        return getCombination(pool.sorted(), size)
+        return getNestedCombination(pool.sorted(), size)
     }
 
-    fun getCombination(pool: List<Int>, size: Int): List<Array<Int>> {
+    fun getNestedCombination(pool: List<Int>, size: Int): List<Array<Int>> {
 
         val pick = Stack<Int>().apply { addAll(Array<Int>(size) { 0 }) }
         val result = mutableListOf<Array<Int>>()
