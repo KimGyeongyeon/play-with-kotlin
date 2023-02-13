@@ -18,6 +18,7 @@ class SpecificPath : Solution {
 //
 //        getDistance(1, 5, edges).let { println(it) }
 //        getDistance(3, 5, edges).let { println(it) }
+        pathCache.forEach{ it -> println(it.value.joinToString()) }
     }
 
     private val SPACE = " "
@@ -74,45 +75,42 @@ class SpecificPath : Solution {
 
     // 다익스트라
     private val pathCache: MutableMap<Int, Array<Int>> = mutableMapOf()
-    private fun getDistance(arr: Int, dest: Int, edges: Array<Array<Int>>): Int {
+    private fun getDistance(origin: Int, dest: Int, edges: Array<Array<Int>>): Int {
         // 기존 정보 확인
-        val cache = pathCache[arr]?.get(dest)
+        val cache = pathCache[origin]?.get(dest)
         if (cache != null) {
             return throwIfIntMax(cache)
         }
 
         // 초기화
-        val queue = ArrayDeque<Int>()
-        val visited = HashSet<Int>()
-        val pathLength = Array<Int>(edges.size) { INF }
-        pathLength[arr] = 0
-        queue.add(arr)
+        val node = edges.size - 1
+        val pathLength = edges[origin].copyOf()
+        pathLength[origin] = 0
 
-        while (queue.isNotEmpty()) {
-            val currNode = queue.removeFirst()
-            if (visited.contains(currNode)) continue
+        for (stop in 1..node) {
+            if (stop == origin) continue
+            for (end in 1..node) {
+                if (stop == end) continue
 
-            // 이웃 노드 큐에 추가
-            for (i in edges[currNode].indices) {
-                if (edges[currNode][i] != NOT_EXIST) {
-                    queue.add(i)
+                val directPath = pathLength[end]
+                val path1 = pathLength[stop]
+                val path2 = edges[stop][end]
 
-                    val oldLength = pathLength[i]
-                    val new1 = pathLength[currNode]
-                    if (new1 != INF) {
-                        val new2 = edges[currNode][i]
-                        pathLength[i] = min(oldLength, new1 + new2)
-                    }
+                // 기존 path가 없다고 우회경로가 실패라는 보장은 없다...
+                if (path1.isPathExist() && path2.isPathExist()) {
+                    pathLength[end] = min(directPath, path1 + path2)
                 }
             }
-            // 방문처리
-            visited.add(currNode)
         }
 
         // 정보 저장
-        pathCache[arr] = pathLength
+        pathCache[origin] = pathLength
 
         return throwIfIntMax(pathLength[dest])
+    }
+
+    private fun Int.isPathExist(): Boolean {
+        return this != INF
     }
 
     private fun throwIfIntMax(num: Int): Int {
