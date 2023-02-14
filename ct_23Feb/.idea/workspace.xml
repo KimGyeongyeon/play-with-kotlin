@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cbdbb1cd-4463-4744-a9b4-a368dec453f4" name="변경" comment="pass : N과 M (8)&#10;&#10;- 끝숫자의 기준을 바꿔서 통과했다.">
+    <list default="true" id="cbdbb1cd-4463-4744-a9b4-a368dec453f4" name="변경" comment="save : N과 M (8)&#10;&#10;- 중복을 허용하는 조합이라서 함수 이름을 바꾸었다">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/week3/NM8.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/week3/NM8.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,7 +150,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676310561685</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="save : N과 M (8)&#10;&#10;- 중복을 허용하는 조합이라서 함수 이름을 바꾸었다">
+      <created>1676312128667</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1676312128667</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -187,7 +196,8 @@
     <MESSAGE value="save : N과 M (8)&#10;&#10;- 현재로서는 끝 인덱스 두개만 바꿀수있는 상태" />
     <MESSAGE value="save : N과 M (8)&#10;&#10;- Stack을 이용하여 원하는 동작을 이뤄내었으나 끝 인덱스가 잘 처리되지 않는 상태임&#10;ex) 6C3 케이스에서 3,4,5를 선택하면 끝나버림. 5,5,5 까지 가야함" />
     <MESSAGE value="pass : N과 M (8)&#10;&#10;- 끝숫자의 기준을 바꿔서 통과했다." />
-    <option name="LAST_COMMIT_MESSAGE" value="pass : N과 M (8)&#10;&#10;- 끝숫자의 기준을 바꿔서 통과했다." />
+    <MESSAGE value="save : N과 M (8)&#10;&#10;- 중복을 허용하는 조합이라서 함수 이름을 바꾸었다" />
+    <option name="LAST_COMMIT_MESSAGE" value="save : N과 M (8)&#10;&#10;- 중복을 허용하는 조합이라서 함수 이름을 바꾸었다" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -196,6 +206,27 @@
           <url>file://$PROJECT_DIR$/src/main/kotlin/week2/SpecificPath.kt</url>
           <line>116</line>
           <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/week3/NM9.kt</url>
+          <line>22</line>
+          <properties>
+            <option name="lambda-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/week3/NM9.kt</url>
+          <line>26</line>
+          <properties>
+            <option name="lambda-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/week3/NM9.kt</url>
+          <line>45</line>
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

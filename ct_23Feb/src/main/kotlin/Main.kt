@@ -1,8 +1,6 @@
-import week2.FloydWarshall
-import week2.SpecificPath
-import week3.NM8
+import week3.NM9
 
 fun main() {
-    val question = NM8()
+    val question = NM9()
     question.start()
 }
