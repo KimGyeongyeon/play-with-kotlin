@@ -58,4 +58,46 @@ class NM8 : Solution {
         }
         return result
     }
+
+    // 이건 통상 생각하는 조합을 구현한것이다.
+    fun getCombination(pool: List<Int>, size: Int): List<Array<Int>> {
+
+        val pick = Stack<Int>().apply { addAll(Array<Int>(size) { it }) }
+        val result = mutableListOf<Array<Int>>()
+
+        while (true) {
+            val elem = Array<Int>(size) { i -> pool[pick[i]] }.let {
+                result.add(it)
+            }
+
+            // 인덱스 갱신
+            val endedIndex = Stack<Int>()
+            for (i in pick.indices.reversed()) {
+                if (pick[i] == pool.size - size + i) {
+                    pick.pop().let { endedIndex.push(it) }
+                } else {
+                    break
+                }
+            }
+
+            if (endedIndex.isEmpty()) {
+                pick[size - 1]++
+            } else {
+                val lastIndex = pick.size - 1
+                if (lastIndex < 0) {
+                    break
+                } else {
+                    pick[lastIndex]++
+                    var head = pick.last()
+                    while (endedIndex.isNotEmpty()) {
+                        head++
+                        pick.add(head)
+                        endedIndex.pop()
+                    }
+                }
+            }
+        }
+        return result
+    }
+
 }
