@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cbdbb1cd-4463-4744-a9b4-a368dec453f4" name="변경" comment="pass : N과 M (12)&#10;&#10;- N과 M 8번과 해법이 같다.">
+    <list default="true" id="cbdbb1cd-4463-4744-a9b4-a368dec453f4" name="변경" comment="submit : N과 M (9)&#10;&#10;- 틀렸다고 뜬다.. 예외 케이스를 더 만들어봐야할 것 같다.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consoleApp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/consoleApp.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/week3/NM9.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/week3/NM9.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/week3/NM12.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/week3/NM12.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/week3/NM8.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/week3/NM8.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,7 +179,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676371268417</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="submit : N과 M (9)&#10;&#10;- 틀렸다고 뜬다.. 예외 케이스를 더 만들어봐야할 것 같다.">
+      <created>1676376917989</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1676376917990</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -222,7 +229,8 @@
     <MESSAGE value="save : N과 M (9)&#10;&#10;- Stack과 Queue를 사용하는 설계를 꿈꿨으나 종료 조건이 복잡하다는 단점을 발견했다.&#10;- 없는 숫자 중 작은 것 부터 할당하는거... 어떻게 해야하나" />
     <MESSAGE value="feat : Combination 구현&#10;&#10;- 일반적인 중복을 허락하지 않는 조합 함수도 구현했다." />
     <MESSAGE value="pass : N과 M (12)&#10;&#10;- N과 M 8번과 해법이 같다." />
-    <option name="LAST_COMMIT_MESSAGE" value="pass : N과 M (12)&#10;&#10;- N과 M 8번과 해법이 같다." />
+    <MESSAGE value="submit : N과 M (9)&#10;&#10;- 틀렸다고 뜬다.. 예외 케이스를 더 만들어봐야할 것 같다." />
+    <option name="LAST_COMMIT_MESSAGE" value="submit : N과 M (9)&#10;&#10;- 틀렸다고 뜬다.. 예외 케이스를 더 만들어봐야할 것 같다." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -231,14 +239,6 @@
           <url>file://$PROJECT_DIR$/src/main/kotlin/week2/SpecificPath.kt</url>
           <line>116</line>
           <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/week3/NM9.kt</url>
-          <line>23</line>
-          <properties>
-            <option name="lambda-ordinal" value="-1" />
-          </properties>
-          <option name="timeStamp" value="16" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -28,6 +28,7 @@ class NM12 : Solution {
         val result = mutableListOf<Array<Int>>()
 
         while (true) {
+            // 이 부분을 함수 외부로 아예 뺐으면 더 좋았을 것 같다.
             val elem = Array<Int>(size) { i -> pool[pick[i]] }.let {
                 result.add(it)
             }
