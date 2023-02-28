@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cbdbb1cd-4463-4744-a9b4-a368dec453f4" name="변경" comment="submit : sort ver 1&#10;&#10;- s가 n보다 작은 경우만을 고려해서 무조건 뒷 수가 크면 앞쪽부터 swap 하도록 했는데, s가 가장 큰 수의 인덱스 보다 커서 그 수를 맨 앞으로 가져올 수 있는 경우를 무시했다.">
+    <list default="true" id="cbdbb1cd-4463-4744-a9b4-a368dec453f4" name="변경" comment="save : ship ver 1&#10;&#10;- 크레인에게 박스를 고르게 나눠주는 문제.&#10;- avg 만큼 우선 나눠주고 남은걸 나누려고 계획했다.&#10;- 근데 box가 무거우면 어차피 무게 제한이 높은 크레인이 옮겨야한다는 것을 깨닫고 최대한 미루는 알고리즘으로 수행할 예정">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/week4/Sort1083.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/week4/Sort1083.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/week4/Ship1092.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/week4/Ship1092.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,13 +47,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="Main" type="JetRunConfigurationType">
       <option name="MAIN_CLASS_NAME" value="MainKt" />
@@ -199,7 +200,21 @@
       <option name="project" value="LOCAL" />
       <updated>1677044851045</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="save : sort ver 2&#10;&#10;- 수정 과정 저장함">
+      <created>1677126639960</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1677126639960</updated>
+    </task>
+    <task id="LOCAL-00020" summary="save : ship ver 1&#10;&#10;- 크레인에게 박스를 고르게 나눠주는 문제.&#10;- avg 만큼 우선 나눠주고 남은걸 나누려고 계획했다.&#10;- 근데 box가 무거우면 어차피 무게 제한이 높은 크레인이 옮겨야한다는 것을 깨닫고 최대한 미루는 알고리즘으로 수행할 예정">
+      <created>1677126718805</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1677126718805</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -245,7 +260,9 @@
     <MESSAGE value="submit : N과 M (9)&#10;&#10;- 틀렸다고 뜬다.. 예외 케이스를 더 만들어봐야할 것 같다." />
     <MESSAGE value="feat : 3주차 스터디 메모 추가&#10;&#10;- 백트래킹 방식으로 중복 조건을 걸려야 시간 초과에 대응할 수 있는 문제들이 많으니 재귀를 통한 백트래킹 구현에 익숙해지도록 하기" />
     <MESSAGE value="submit : sort ver 1&#10;&#10;- s가 n보다 작은 경우만을 고려해서 무조건 뒷 수가 크면 앞쪽부터 swap 하도록 했는데, s가 가장 큰 수의 인덱스 보다 커서 그 수를 맨 앞으로 가져올 수 있는 경우를 무시했다." />
-    <option name="LAST_COMMIT_MESSAGE" value="submit : sort ver 1&#10;&#10;- s가 n보다 작은 경우만을 고려해서 무조건 뒷 수가 크면 앞쪽부터 swap 하도록 했는데, s가 가장 큰 수의 인덱스 보다 커서 그 수를 맨 앞으로 가져올 수 있는 경우를 무시했다." />
+    <MESSAGE value="save : sort ver 2&#10;&#10;- 수정 과정 저장함" />
+    <MESSAGE value="save : ship ver 1&#10;&#10;- 크레인에게 박스를 고르게 나눠주는 문제.&#10;- avg 만큼 우선 나눠주고 남은걸 나누려고 계획했다.&#10;- 근데 box가 무거우면 어차피 무게 제한이 높은 크레인이 옮겨야한다는 것을 깨닫고 최대한 미루는 알고리즘으로 수행할 예정" />
+    <option name="LAST_COMMIT_MESSAGE" value="save : ship ver 1&#10;&#10;- 크레인에게 박스를 고르게 나눠주는 문제.&#10;- avg 만큼 우선 나눠주고 남은걸 나누려고 계획했다.&#10;- 근데 box가 무거우면 어차피 무게 제한이 높은 크레인이 옮겨야한다는 것을 깨닫고 최대한 미루는 알고리즘으로 수행할 예정" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
