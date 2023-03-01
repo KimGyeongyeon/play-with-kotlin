@@ -1,0 +1,66 @@
+package week1
+
+import java.util.*
+
+fun main() {
+    println(parseInput1())
+}
+
+fun parseInput1(): Int {
+    val n = readln().toInt()
+    val parents = readln().split(SPACE).map { it.toInt() }
+    val delete = readln().toInt()
+
+    val tree = makeTree(n, parents)
+    return countTreeExcept(delete, tree)
+}
+
+fun makeTree(n: Int, parents: List<Int>): ArrayList<Node> {
+    val tree = ArrayList<Node>(n)
+    for (num in 0 until n) {
+        val parent = parents[num]
+        tree.add(Node(num, parent, arrayListOf()))
+    }
+
+    for (num in 0 until n) {
+        val parent = parents[num]
+        if (parent in 0 until n) {
+            tree[parent].children.add(num)
+        }
+    }
+    return tree
+}
+
+fun countTreeExcept(except: Int, tree: ArrayList<Node>): Int {
+    val stack = Stack<Node>()
+    val root = tree.find { it.isRoot() }
+    if (root == null || root.num == except) {
+        return 0 // root에 대한 예외처리
+    } else {
+        stack.add(root)
+    }
+
+    var count = 0
+    while (stack.isNotEmpty()) {
+        // DFS를 하되, except는 제외시킨다.
+        val curr = stack.pop()
+        if (curr.isLeaf()) count++ // 방문여부는 따로 표시하지 않는다.
+
+        for (child in curr.children) {
+            if (child != except) {
+                stack.add(tree[child])
+            }
+        }
+    }
+
+    return count
+}
+
+data class Node(
+    val num: Int,
+    val parent: Int,
+    val children: ArrayList<Int>
+) {
+    fun isLeaf(): Boolean = children.isEmpty()
+    fun isRoot(): Boolean = (parent == -1)
+}
