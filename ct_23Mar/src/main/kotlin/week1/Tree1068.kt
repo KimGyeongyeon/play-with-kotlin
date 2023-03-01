@@ -44,7 +44,7 @@ fun countTreeExcept(except: Int, tree: ArrayList<Node>): Int {
     while (stack.isNotEmpty()) {
         // DFS를 하되, except는 제외시킨다.
         val curr = stack.pop()
-        if (curr.isLeaf()) count++ // 방문여부는 따로 표시하지 않는다.
+        if (curr.isLeaf(except)) count++ // 방문여부는 따로 표시하지 않는다.
 
         for (child in curr.children) {
             if (child != except) {
@@ -61,6 +61,6 @@ data class Node(
     val parent: Int,
     val children: ArrayList<Int>
 ) {
-    fun isLeaf(): Boolean = children.isEmpty()
+    fun isLeaf(except: Int): Boolean = children.isEmpty() || (children.size == 1 && children[0] == except)
     fun isRoot(): Boolean = (parent == -1)
 }
