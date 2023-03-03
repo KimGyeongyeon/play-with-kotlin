@@ -111,7 +111,7 @@ class Dijkstra(private val edges: Array<Array<Int>>) {
 }
 
 data class Edge<T>(
-    val value: T,
+    val value: T, // 누적 cost
     val x: Int,
     val y: Int,
 )

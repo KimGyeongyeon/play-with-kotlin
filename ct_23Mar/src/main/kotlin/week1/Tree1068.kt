@@ -15,6 +15,7 @@ fun parseInput1(): Int {
     return countTreeExcept(delete, tree)
 }
 
+/* ArrayList 대신 HashMap을 쓰면 실제 삭제도 구현할 수 있다 */
 fun makeTree(n: Int, parents: List<Int>): ArrayList<Node> {
     val tree = ArrayList<Node>(n)
     for (num in 0 until n) {
@@ -44,10 +45,11 @@ fun countTreeExcept(except: Int, tree: ArrayList<Node>): Int {
     while (stack.isNotEmpty()) {
         // DFS를 하되, except는 제외시킨다.
         val curr = stack.pop()
-        if (curr.isLeaf(except)) count++ // 방문여부는 따로 표시하지 않는다.
+        if (curr.isLeaf(except)) count++
 
         for (child in curr.children) {
             if (child != except) {
+                // 빼는 노드는 방문하지 않는다.
                 stack.add(tree[child])
             }
         }
