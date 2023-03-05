@@ -26,7 +26,7 @@ class Shortcut1446 {
         val cost = Array<Int>(d+1){it}
 
         // 같은 거리를 적은 비용으로 가는 지름길을 우선선택.
-        for(s in shortcuts.sortedBy { it.costPerMeter }) {
+        for(s in shortcuts.sortedBy { it.end }) {
             // cost table 갱신
             if (s.end > d || s.costPerMeter > 1.0) {
                 continue
@@ -36,22 +36,26 @@ class Shortcut1446 {
             if (new < old) {
                 // 지름길
                 for (i in s.end .. d) {
+                    // 길 하나를 간다고 다음 지름길을 못가는게 아니라는걸 고려해야한다!!
                     val usingShortcut = new + (i-s.end)
                     val notUse = cost[i]
                     cost[i] = min(usingShortcut, notUse)
                 }
             }
-
         }
         return cost.last()
     }
 
 }
 
-data class Shortcut(
+class Shortcut(
     val start: Int,
     val end: Int,
     val cost: Int,
 ) {
     val costPerMeter: Double = cost.toDouble()/(end - start)
+
+    override fun toString(): String {
+        return "$start - $end : $cost ($costPerMeter/m)"
+    }
 }
