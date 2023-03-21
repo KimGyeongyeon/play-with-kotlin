@@ -5,3 +5,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo 'temp action'
+      - name: 디렉토리 출력
+        run : ls -al
