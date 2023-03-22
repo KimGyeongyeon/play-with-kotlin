@@ -3,9 +3,6 @@ name: Merge if buildable
 on: 
   pull_request:
     branches: [main]
-    types:
-      - ready_for_review
-      - approved
 
 jobs:
   test:
