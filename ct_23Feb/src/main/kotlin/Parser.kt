@@ -19,3 +19,7 @@ fun getArrayWithLength(): IntArray {
     }
     return arr
 }
+
+fun getNumbers(): List<Int> {
+    return readln().split(" ").map { it.toInt() }
+}

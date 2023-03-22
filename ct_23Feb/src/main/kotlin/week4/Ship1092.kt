@@ -1,26 +1,33 @@
+package week4
+
+import Solution
 import kotlin.math.ceil
 import kotlin.math.min
 
-fun main() {
-    parseInput().let { println(it) }
-}
+class Ship1092: Solution {
+    override fun start() {
+        parseInput().let { println(it) }
+    }
 
-val SPACE = " "
-fun parseInput(): Int {
-    val n = readln().toInt() // n < 50. 크레인의 갯수
-    val cranes = readln().split(SPACE).map { it.toInt() } // 크레인 무게 제한
-    val m = readln().toInt() // m < 10^4. 박스 개수
-    val boxes = readln().split(SPACE).map { it.toInt() } // 박스 무게
-    return getMinTime(
-        Port(
-            cranes, boxes
+    val SPACE = " "
+    fun parseInput(): Int {
+        val n = readln().toInt() // n < 50. 크레인의 갯수
+        val cranes = readln().split(SPACE).map { it.toInt() } // 크레인 무게 제한
+        val m = readln().toInt() // m < 10^4. 박스 개수
+        val boxes = readln().split(SPACE).map { it.toInt() } // 박스 무게
+        return getMinTime(
+            Port(
+                cranes, boxes
+            )
         )
-    )
-}
+    }
 
-fun getMinTime(port: Port): Int {
-    port.assignBox()
-    return port.craneCount.maxOf { it }
+    fun getMinTime(port: Port): Int {
+
+        port.assignBox()
+
+        return port.craneCount.maxOf { it }
+    }
 }
 
 class Port(
@@ -32,9 +39,10 @@ class Port(
     val craneCount = IntArray(cranes.size)
     val avg = ceil(boxes.size.toDouble() / cranes.size).toInt()
 
+
     fun assignBox() {
         var cn = 0
-        for (box in boxDes) {
+        for(box in boxDes) {
             if (cn > craneDes.size) {
                 return // index 오류
             }
@@ -45,7 +53,7 @@ class Port(
             if (craneCount[cn] >= avg) {
                 // 평균보다 많이 수행하는 상황이다.
                 // 뒷 크레인에게 미룰 수 있으면 미룬다.
-                if (cn < craneDes.size - 1 && craneDes[cn + 1] >= box) {
+                if (cn < craneDes.size - 1 && craneDes[cn+1] >= box) {
                     cn++
                     craneCount[cn]++
                 } else {
@@ -64,7 +72,7 @@ class Port(
     fun findLazyCraneIndex(maxIndex: Int): Int {
         var index = 0
         var busy = Int.MAX_VALUE
-        for (c in 0..min(maxIndex, craneDes.size)) {
+        for (c in 0 .. min(maxIndex, craneDes.size)) {
             if (busy >= craneCount[c]) {
                 busy = craneCount[c]
                 index = c
