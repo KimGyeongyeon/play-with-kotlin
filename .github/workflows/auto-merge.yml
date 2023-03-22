@@ -1,9 +1,29 @@
-name: Merge every code into main
-on: push
+name: Merge if buildable
+
+on: 
+  pull_request:
+    branches: [main]
+    types:
+      - approved
+
 jobs:
-  a:
+  test:
     runs-on: ubuntu-latest
     steps:
-      - run: echo 'temp action'
-      - name: 디렉토리 출력
-        run : ls -al
+    - name: ubuntu set up
+    - uses: actions/checkout@v3
+    - uses: actions/setup-java@v3
+      with:
+        java-version: '17'
+    - name: chache gradle package
+      uses: actions/cache@v1
+      with:
+        path: ~/.gradle/caches
+        key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle') }}
+        restore-keys: ${{ runner.os }}-gradle
+    - name : grant execute permission for gradlew
+      run: chmod +x gradlew
+    - run: ./gradlew build
+    - uses: "pascalgn/automerge-action@v0.15.6"
+      env:
+        GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
